@@ -1,0 +1,146 @@
+// utils.scss
+@use "sass:math";
+
+// 设计稿尺寸
+$design-width: 1920;
+$design-height: 1080;
+
+// px 转 vw 函数
+@function px2vw($px) {
+  @return ($px / $design-width) * 100vw;
+}
+
+// px 转 vh 函数
+@function px2vh($px) {
+  @return ($px / $design-height) * 100vh;
+}
+
+
+
+
+html {
+  font-size: px2vw(16);
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('../iconfont/iconfont.woff2') format('woff2'),
+    url('../iconfont/iconfont.woff') format('woff'),
+    url('../iconfont/iconfont.ttf') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 1rem;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+
+  height: px2vh(100);
+  display: flex;
+
+}
+
+header {
+  height: px2vh(96);
+  background-color: #ff2929;
+}
+
+main {
+  height: px2vh(984);
+}
+
+.left-box {
+  flex: 0 0 px2vw(288);
+  background-color: #418760;
+}
+
+.right-box {
+  flex: 0 0 px2vw(1632);
+  height: px2vh(1080);
+  background-color: aquamarine;
+}
+
+.logo {
+  height: px2vh(96);
+  background-color: #6a697b;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+
+.logo-icon {
+  width: 3rem;
+  height: 3rem;
+  background-image: url(../img/logo-icon.png);
+  border-radius: 0.25rem;
+  background-size: cover;
+}
+
+.left-box nav {
+  height: px2vh(984);
+  background-color: #6a697b;
+  padding-top: px2vh(24);
+  padding-bottom: px2vh(24);
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+//隐藏容器滚动条
+.left-box nav::-webkit-scrollbar {
+    display: none; /* 隐藏滚动条 */
+}
+
+/* 针对IE和Edge */
+.left-box nav {
+    -ms-overflow-style: none; 
+}
+
+/* 针对Firefox */
+.left-box nav{
+    scrollbar-width: none; 
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:1rem;
+}
+
+ul a{
+
+    color: #fff; 
+    text-decoration: none;
+
+}
+
+li {
+  width: px2vw(224);
+  height: px2vh(64);
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 0.2rem solid #A6A6AF;
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: 0.1rem;
+  color: #F2F2F2;
+}
+
+.li-iconfont {
+  font-size: 2rem;
+  line-height: px2vh(64);
+  margin-left: px2vw(8);
+  margin-right: px2vw(20);
+}

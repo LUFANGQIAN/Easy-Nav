@@ -1,0 +1,120 @@
+@charset "UTF-8";
+html {
+  font-size: 0.8333333333vw;
+}
+
+@font-face {
+  font-family: "iconfont";
+  src: url("../iconfont/iconfont.woff2") format("woff2"), url("../iconfont/iconfont.woff") format("woff"), url("../iconfont/iconfont.ttf") format("truetype");
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 1rem;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  height: 9.2592592593vh;
+  display: flex;
+}
+
+header {
+  height: 8.8888888889vh;
+  background-color: #ff2929;
+}
+
+main {
+  height: 91.1111111111vh;
+}
+
+.left-box {
+  flex: 0 0 15vw;
+  background-color: #418760;
+}
+
+.right-box {
+  flex: 0 0 85vw;
+  height: 100vh;
+  background-color: aquamarine;
+}
+
+.logo {
+  height: 8.8888888889vh;
+  background-color: #6a697b;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+
+.logo-icon {
+  width: 3rem;
+  height: 3rem;
+  background-image: url(../img/logo-icon.png);
+  border-radius: 0.25rem;
+  background-size: cover;
+}
+
+.left-box nav {
+  height: 91.1111111111vh;
+  background-color: #6a697b;
+  padding-top: 2.2222222222vh;
+  padding-bottom: 2.2222222222vh;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.left-box nav::-webkit-scrollbar {
+  display: none; /* 隐藏滚动条 */
+}
+
+/* 针对IE和Edge */
+.left-box nav {
+  -ms-overflow-style: none;
+}
+
+/* 针对Firefox */
+.left-box nav {
+  scrollbar-width: none;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+ul a {
+  color: #fff;
+  text-decoration: none;
+}
+
+li {
+  width: 11.6666666667vw;
+  height: 5.9259259259vh;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 0.2rem solid #A6A6AF;
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: 0.1rem;
+  color: #F2F2F2;
+}
+
+.li-iconfont {
+  font-size: 2rem;
+  line-height: 5.9259259259vh;
+  margin-left: 0.4166666667vw;
+  margin-right: 1.0416666667vw;
+}
+
+/*# sourceMappingURL=index.css.map */
