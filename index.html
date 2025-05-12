@@ -54,15 +54,16 @@
     <!-- 头部栏 -->
     <header>
       <!-- 时间 -->
-      <time datetime=""></time>
+      <div id="header-time" class="time"></div>
 
       <!-- 功能按键列表 -->
       <nav>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
       </nav>
+
 
     </header>
 
@@ -91,12 +92,25 @@
           <div class="color-block"></div>
           <div class="color-block"></div>
         </div>
-
-
       </section>
 
     </main>
   </div>
+
+  <script>
+    function updateTime(ElementId) {
+      let getTimeElement = document.getElementById(ElementId)
+      let now = new Date()
+      let hours = String(now.getHours()).padStart(2, "0")
+      let minutes = String(now.getMinutes()).padStart(2, "0")
+      let miao = String(now.getSeconds()).padStart(2, "0")
+      let time = `${hours}:${minutes}:${miao}`
+      console.log(time)
+      getTimeElement.innerText = time
+    }
+
+    setInterval(() => { updateTime("header-time") }, 1000);
+  </script>
 </body>
 
 </html>

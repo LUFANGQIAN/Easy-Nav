@@ -20,11 +20,6 @@ body {
   display: flex;
 }
 
-header {
-  height: 8.8888888889vh;
-  background-color: #ff2929;
-}
-
 main {
   height: 91.1111111111vh;
 }
@@ -32,12 +27,6 @@ main {
 .left-box {
   flex: 0 0 15vw;
   background-color: #418760;
-}
-
-.right-box {
-  flex: 0 0 85vw;
-  height: 100vh;
-  background-color: aquamarine;
 }
 
 .logo {
@@ -72,7 +61,8 @@ h1 {
 }
 
 .left-box nav::-webkit-scrollbar {
-  display: none; /* 隐藏滚动条 */
+  display: none;
+  /* 隐藏滚动条 */
 }
 
 /* 针对IE和Edge */
@@ -101,7 +91,7 @@ ul a {
 li {
   width: 11.6666666667vw;
   height: 5.9259259259vh;
-  border-radius: 5px;
+  border-radius: 0.2604166667vw;
   box-sizing: border-box;
   border: 0.2rem solid #A6A6AF;
   font-size: 2rem;
@@ -115,6 +105,44 @@ li {
   line-height: 5.9259259259vh;
   margin-left: 0.4166666667vw;
   margin-right: 1.0416666667vw;
+}
+
+.right-box {
+  flex: 0 0 85vw;
+  height: 100vh;
+  background-color: aquamarine;
+}
+
+header {
+  height: 8.8888888889vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.time {
+  width: 26.0416666667vw;
+  height: 8.8888888889vh;
+  line-height: 8.8888888889vh;
+  font-size: 4rem;
+  margin-left: 1.6666666667vw;
+}
+
+header nav {
+  width: 15.8333333333vw;
+  height: 5.9259259259vh;
+  display: flex;
+  gap: 0.8333333333vw;
+  margin-right: 2.5vw;
+  align-self: center;
+}
+
+nav button {
+  width: 3.3333333333vw;
+  height: 5.9259259259vh;
+  background-color: #e2e2e9;
+  border: none;
+  border-radius: 50%;
 }
 
 /*# sourceMappingURL=index.css.map */

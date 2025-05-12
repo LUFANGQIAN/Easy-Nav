@@ -44,10 +44,6 @@ body {
 
 }
 
-header {
-  height: px2vh(96);
-  background-color: #ff2929;
-}
 
 main {
   height: px2vh(984);
@@ -58,11 +54,8 @@ main {
   background-color: #418760;
 }
 
-.right-box {
-  flex: 0 0 px2vw(1632);
-  height: px2vh(1080);
-  background-color: aquamarine;
-}
+
+
 
 .logo {
   height: px2vh(96);
@@ -98,17 +91,18 @@ h1 {
 
 //隐藏容器滚动条
 .left-box nav::-webkit-scrollbar {
-    display: none; /* 隐藏滚动条 */
+  display: none;
+  /* 隐藏滚动条 */
 }
 
 /* 针对IE和Edge */
 .left-box nav {
-    -ms-overflow-style: none; 
+  -ms-overflow-style: none;
 }
 
 /* 针对Firefox */
-.left-box nav{
-    scrollbar-width: none; 
+.left-box nav {
+  scrollbar-width: none;
 }
 
 ul {
@@ -116,20 +110,20 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap:1rem;
+  gap: 1rem;
 }
 
-ul a{
+ul a {
 
-    color: #fff; 
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 
 }
 
 li {
   width: px2vw(224);
   height: px2vh(64);
-  border-radius: 5px;
+  border-radius: px2vw(5);
   box-sizing: border-box;
   border: 0.2rem solid #A6A6AF;
   font-size: 2rem;
@@ -143,4 +137,43 @@ li {
   line-height: px2vh(64);
   margin-left: px2vw(8);
   margin-right: px2vw(20);
+}
+
+.right-box {
+  flex: 0 0 px2vw(1632);
+  height: px2vh(1080);
+  background-color: aquamarine;
+}
+
+
+header {
+  height: px2vh(96);
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.time {
+  width: px2vw(500);
+  height: px2vh(96);
+  line-height: px2vh(96);
+  font-size: 4rem;
+  margin-left: px2vw(32);
+}
+
+header nav {
+  width: px2vw(304);
+  height: px2vh(64);
+  display: flex;
+  gap: px2vw(16);
+  margin-right: px2vw(48);
+  align-self: center;
+}
+
+nav button {
+  width: px2vw(64);
+  height: px2vh(64);
+  background-color: #e2e2e9;
+  border: none;
+  border-radius: 50%;
 }
