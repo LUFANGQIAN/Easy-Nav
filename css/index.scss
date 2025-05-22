@@ -15,9 +15,6 @@ $design-height: 1080;
   @return ($px / $design-height) * 100vh;
 }
 
-
-
-
 html {
   font-size: px2vw(16);
 }
@@ -51,7 +48,8 @@ main {
 
 .left-box {
   flex: 0 0 px2vw(288);
-  background-color: #418760;
+  background-color: #6a697b;
+  height: 100vh;
 }
 
 
@@ -81,7 +79,7 @@ h1 {
 }
 
 .left-box nav {
-  height: px2vh(984);
+  height: px2vh(900);
   background-color: #6a697b;
   padding-top: px2vh(24);
   padding-bottom: px2vh(24);
@@ -142,7 +140,7 @@ li {
 .right-box {
   flex: 0 0 px2vw(1632);
   height: px2vh(1080);
-  background-color: aquamarine;
+  background-color: #E4EBF8;
 }
 
 
@@ -154,26 +152,235 @@ header {
 }
 
 .time {
-  width: px2vw(500);
+  // width: px2vw(350);
   height: px2vh(96);
   line-height: px2vh(96);
   font-size: 4rem;
   margin-left: px2vw(32);
+
 }
 
 header nav {
   width: px2vw(304);
-  height: px2vh(64);
+  height: 4rem;
   display: flex;
   gap: px2vw(16);
   margin-right: px2vw(48);
   align-self: center;
 }
 
-nav button {
-  width: px2vw(64);
-  height: px2vh(64);
-  background-color: #e2e2e9;
+.button-list button {
+  width: 4rem;
+  height: 4rem;
+  background-color: #6A697B;
   border: none;
+  padding: 0 0;
   border-radius: 50%;
+}
+
+.button-list-icon {
+  font-size: 2.5rem !important;
+  color: #fff;
+}
+
+main {
+  padding-top: px2vh(48);
+  box-sizing: border-box;
+}
+
+.search-box {
+  width: px2vw(960);
+  height: px2vh(80);
+  display: flex;
+  margin: auto;
+  border: 0.2rem solid #707070;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  background-color: #fff;
+
+}
+
+
+
+.search-engines-icon {
+  width: px2vw(80);
+  background-color: #fff;
+  border-radius: 1rem;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.search-engines-icon span {
+  font-size: 3.5rem;
+
+}
+
+.input-box {
+  flex: 1;
+  border: none;
+  padding: 0;
+  // line-height: px2vh(80);
+  font-size: 1.8rem;
+  outline: none;
+  margin-left: 1rem;
+  padding-top: 0.5rem;
+}
+
+.input-box::placeholder {
+  color: #b5b5b5;
+  /* 提示字颜色 */
+}
+
+.search-icon {
+  width: px2vw(96);
+  background-color: #fff;
+  border: none;
+  border-radius: 0 1rem 1rem 0;
+}
+
+.search-icon span {
+  font-size: 2.5rem;
+  color: #B5B5B5;
+}
+
+.web-cards {
+  width: px2vw(1532);
+  height: px2vh(808);
+  background-color: #E4EBF8;
+  margin: auto;
+  margin-top: px2vh(48);
+  overflow: auto;
+}
+
+.web-cards section {
+  margin-bottom: px2vh(32);
+}
+
+/* 针对WebKit浏览器（如Chrome, Safari） */
+.web-cards::-webkit-scrollbar {
+  display: none;
+  /* 隐藏滚动条 */
+}
+
+/* 针对IE和Edge */
+.web-cards {
+  -ms-overflow-style: none;
+}
+
+/* 针对Firefox */
+.web-cards {
+  scrollbar-width: none;
+}
+
+.card-title {
+  display: flex;
+  height: px2vh(50);
+  gap: px2vw(16);
+  align-items: center;
+  margin-bottom: 1rem;
+  line-height: px2vh(50);
+}
+
+.card-title span {
+  font-size: 2.5rem;
+}
+
+.card-title h2 {
+  font-size: 2rem;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 6rem;
+  gap: 2rem 4rem;
+}
+
+.card {
+  display: flex;
+  position: relative;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+.card-block {
+  display: flex;
+  gap: 0.5rem;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.card-block:hover {
+  opacity: 0;
+}
+
+
+.card-block-favicon {
+  height: 4rem;
+  width: 4rem;
+  background-color: #707070;
+  border-radius: 50%;
+}
+
+.card-block-favicon img {
+  height: 4rem;
+  width: 4rem;
+  background-color: #707070;
+  border-radius: 50%;
+}
+
+.card-block-title {
+  flex: 1;
+}
+
+.card-block-title h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.card-block-title p {
+  color: #707070;
+}
+
+.card-hover {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-hover:hover {
+  opacity: 1;
+}
+
+.card-button-goto {
+  flex: 1;
+  background-color: #54c058;
+  border-radius: 0.5rem 0 0 0.5rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.card-button-setting {
+  flex: 1;
+  background-color: #24a5ff;
+  border-radius: 0 0.5rem 0.5rem 0;
+  color: #fff;
+  font-weight: bold;
 }

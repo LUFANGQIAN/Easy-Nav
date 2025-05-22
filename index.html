@@ -57,11 +57,11 @@
       <div id="header-time" class="time"></div>
 
       <!-- 功能按键列表 -->
-      <nav>
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
+      <nav class="button-list">
+        <button><span class="iconfont button-list-icon">&#xe665;</span></button>
+        <button><span class="iconfont button-list-icon">&#xe621;</span></button>
+        <button><span class="iconfont button-list-icon">&#xe605;</span></button>
+        <button><span class="iconfont button-list-icon">&#xe60d;</span></button>
       </nav>
 
 
@@ -69,35 +69,477 @@
 
     <main>
       <!-- 搜索框 -->
-      <form>
-        <input type="text" placeholder="搜索...">
-        <button type="submit">提交</button>
+      <form class="search-box">
+        <button class="search-engines-icon"><span class="iconfont">&#xe885;</span></button>
+        <input class="input-box" type="text" placeholder="请输入关键字，按下回车 / ENTER搜索">
+        <button class="search-icon" type="submit"><span class="iconfont">&#xe70b;</span></button>
       </form>
 
-      <!-- 导航主题内容部分-->
-      <section>
-        <!-- 分类图标与标题 -->
-        <div>
 
-        </div>
+      <!-- 卡片类区域 -->
+      <div class="web-cards">
+        <!-- 导航主题内容部分-->
 
-        <!-- 网页卡片部分 -->
-        <div>
-          <div class="color-block"></div>
-          <div class="color-block"></div>
-          <div class="color-block"></div>
-          <div class="color-block"></div>
-          <div class="color-block"></div>
-          <div class="color-block"></div>
-          <div class="color-block"></div>
-          <div class="color-block"></div>
-        </div>
-      </section>
+
+        <!-- -------------------------------------------------- -->
+        <!-- 单个卡片类 -->
+        <section>
+
+          <!-- 分类图标与标题 -->
+          <div class="card-title">
+            <span class="iconfont">&#xe634;</span>
+            <h2>个人主页</h2>
+          </div>
+          <!-- 分类图标与标题结束 -->
+
+          <!-- 卡片列表 -->
+          <div class="card-list">
+
+            <!-- 单个卡片 -->
+            <div class="card">
+
+              <!-- 卡片信息层 -->
+              <div class="card-block">
+                <div class="card-block-favicon">
+                  <img id="favicon" src="./img/logo-icon.png" alt="favicon">
+                </div>
+                <div class="card-block-title">
+                  <h3>测试网站</h3>
+                  <p>这是一个示例网站描述这是一个示例网站描述</p>
+                </div>
+              </div>
+              <!-- 卡片信息层结束 -->
+
+              <!-- 卡片按钮层 -->
+              <div class="card-hover">
+                <button class="card-button-goto">前往</button>
+                <button class="card-button-setting">设置</button>
+              </div>
+              <!-- 卡片按钮层结束 -->
+
+            </div>
+            <!-- 单个卡片结束 -->
+
+          </div>
+          <!-- 卡片列表结束 -->
+
+        </section>
+        <!-- 单个卡片类结束 -->
+
+        <!-- -------------------------------------------------- -->
+
+        <!-- 单个卡片类 -->
+        <section>
+
+          <!-- 分类图标与标题 -->
+          <div class="card-title">
+            <span class="iconfont">&#xe634;</span>
+            <h2>个人主页</h2>
+          </div>
+          <!-- 分类图标与标题结束 -->
+
+          <!-- 卡片列表 -->
+          <div class="card-list">
+
+            <!-- 单个卡片 -->
+            <div class="card">
+
+              <!-- 卡片信息层 -->
+              <div class="card-block">
+                <div class="card-block-favicon">
+                  <img id="favicon" src="./img/logo-icon.png" alt="favicon">
+                </div>
+                <div class="card-block-title">
+                  <h3>测试网站</h3>
+                  <p>这是一个示例网站描述这是一个示例网站描述</p>
+                </div>
+              </div>
+              <!-- 卡片信息层结束 -->
+
+              <!-- 卡片按钮层 -->
+              <div class="card-hover">
+                <button class="card-button-goto">前往</button>
+                <button class="card-button-setting">设置</button>
+              </div>
+              <!-- 卡片按钮层结束 -->
+
+            </div>
+            <!-- 单个卡片结束 -->
+
+            <!-- 单个卡片 -->
+            <div class="card">
+
+              <!-- 卡片信息层 -->
+              <div class="card-block">
+                <div class="card-block-favicon">
+                  <img id="favicon" src="./img/logo-icon.png" alt="favicon">
+                </div>
+                <div class="card-block-title">
+                  <h3>测试网站</h3>
+                  <p>这是一个示例网站描述这是一个示例网站描述</p>
+                </div>
+              </div>
+              <!-- 卡片信息层结束 -->
+
+              <!-- 卡片按钮层 -->
+              <div class="card-hover">
+                <button class="card-button-goto">前往</button>
+                <button class="card-button-setting">设置</button>
+              </div>
+              <!-- 卡片按钮层结束 -->
+
+            </div>
+            <!-- 单个卡片结束 -->
+
+            <!-- 单个卡片 -->
+            <div class="card">
+
+              <!-- 卡片信息层 -->
+              <div class="card-block">
+                <div class="card-block-favicon">
+                  <img id="favicon" src="./img/logo-icon.png" alt="favicon">
+                </div>
+                <div class="card-block-title">
+                  <h3>测试网站</h3>
+                  <p>这是一个示例网站描述这是一个示例网站描述</p>
+                </div>
+              </div>
+              <!-- 卡片信息层结束 -->
+
+              <!-- 卡片按钮层 -->
+              <div class="card-hover">
+                <button class="card-button-goto">前往</button>
+                <button class="card-button-setting">设置</button>
+              </div>
+              <!-- 卡片按钮层结束 -->
+
+            </div>
+            <!-- 单个卡片结束 -->
+
+            <!-- 单个卡片 -->
+            <div class="card">
+
+              <!-- 卡片信息层 -->
+              <div class="card-block">
+                <div class="card-block-favicon">
+                  <img id="favicon" src="./img/logo-icon.png" alt="favicon">
+                </div>
+                <div class="card-block-title">
+                  <h3>测试网站</h3>
+                  <p>这是一个示例网站描述这是一个示例网站描述</p>
+                </div>
+              </div>
+              <!-- 卡片信息层结束 -->
+
+              <!-- 卡片按钮层 -->
+              <div class="card-hover">
+                <button class="card-button-goto">前往</button>
+                <button class="card-button-setting">设置</button>
+              </div>
+              <!-- 卡片按钮层结束 -->
+
+            </div>
+            <!-- 单个卡片结束 -->
+
+
+            <!-- 单个卡片 -->
+            <div class="card">
+
+              <!-- 卡片信息层 -->
+              <div class="card-block">
+                <div class="card-block-favicon">
+                  <img id="favicon" src="./img/logo-icon.png" alt="favicon">
+                </div>
+                <div class="card-block-title">
+                  <h3>测试网站</h3>
+                  <p>这是一个示例网站描述这是一个示例网站描述</p>
+                </div>
+              </div>
+              <!-- 卡片信息层结束 -->
+
+              <!-- 卡片按钮层 -->
+              <div class="card-hover">
+                <button class="card-button-goto">前往</button>
+                <button class="card-button-setting">设置</button>
+              </div>
+              <!-- 卡片按钮层结束 -->
+
+            </div>
+            <!-- 单个卡片结束 -->
+
+
+            <!-- 单个卡片 -->
+            <div class="card">
+
+              <!-- 卡片信息层 -->
+              <div class="card-block">
+                <div class="card-block-favicon">
+                  <img id="favicon" src="./img/logo-icon.png" alt="favicon">
+                </div>
+                <div class="card-block-title">
+                  <h3>测试网站</h3>
+                  <p>这是一个示例网站描述这是一个示例网站描述</p>
+                </div>
+              </div>
+              <!-- 卡片信息层结束 -->
+
+              <!-- 卡片按钮层 -->
+              <div class="card-hover">
+                <button class="card-button-goto">前往</button>
+                <button class="card-button-setting">设置</button>
+              </div>
+              <!-- 卡片按钮层结束 -->
+
+            </div>
+            <!-- 单个卡片结束 -->
+
+
+            <!-- 单个卡片 -->
+            <div class="card">
+
+              <!-- 卡片信息层 -->
+              <div class="card-block">
+                <div class="card-block-favicon">
+                  <img id="favicon" src="./img/logo-icon.png" alt="favicon">
+                </div>
+                <div class="card-block-title">
+                  <h3>测试网站</h3>
+                  <p>这是一个示例网站描述这是一个示例网站描述</p>
+                </div>
+              </div>
+              <!-- 卡片信息层结束 -->
+
+              <!-- 卡片按钮层 -->
+              <div class="card-hover">
+                <button class="card-button-goto">前往</button>
+                <button class="card-button-setting">设置</button>
+              </div>
+              <!-- 卡片按钮层结束 -->
+
+            </div>
+            <!-- 单个卡片结束 -->
+
+          </div>
+          <!-- 卡片列表结束 -->
+
+        </section>
+        <!-- 单个卡片类结束 -->
+
+
+        <!-- ------------------------------------------------------------ -->
+
+
+        <!-- 单个卡片类 -->
+        <section>
+
+          <!-- 分类图标与标题 -->
+          <div class="card-title">
+            <span class="iconfont">&#xe634;</span>
+            <h2>个人主页</h2>
+          </div>
+          <!-- 分类图标与标题结束 -->
+
+          <!-- 卡片列表 -->
+          <div class="card-list">
+
+            <!-- 单个卡片 -->
+            <div class="card">
+
+              <!-- 卡片信息层 -->
+              <div class="card-block">
+                <div class="card-block-favicon">
+                  <img id="favicon" src="./img/logo-icon.png" alt="favicon">
+                </div>
+                <div class="card-block-title">
+                  <h3>测试网站</h3>
+                  <p>这是一个示例网站描述这是一个示例网站描述</p>
+                </div>
+              </div>
+              <!-- 卡片信息层结束 -->
+
+              <!-- 卡片按钮层 -->
+              <div class="card-hover">
+                <button class="card-button-goto">前往</button>
+                <button class="card-button-setting">设置</button>
+              </div>
+              <!-- 卡片按钮层结束 -->
+
+            </div>
+            <!-- 单个卡片结束 -->
+
+            <!-- 单个卡片 -->
+            <div class="card">
+
+              <!-- 卡片信息层 -->
+              <div class="card-block">
+                <div class="card-block-favicon">
+                  <img id="favicon" src="./img/logo-icon.png" alt="favicon">
+                </div>
+                <div class="card-block-title">
+                  <h3>测试网站</h3>
+                  <p>这是一个示例网站描述这是一个示例网站描述</p>
+                </div>
+              </div>
+              <!-- 卡片信息层结束 -->
+
+              <!-- 卡片按钮层 -->
+              <div class="card-hover">
+                <button class="card-button-goto">前往</button>
+                <button class="card-button-setting">设置</button>
+              </div>
+              <!-- 卡片按钮层结束 -->
+
+            </div>
+            <!-- 单个卡片结束 -->
+
+            <!-- 单个卡片 -->
+            <div class="card">
+
+              <!-- 卡片信息层 -->
+              <div class="card-block">
+                <div class="card-block-favicon">
+                  <img id="favicon" src="./img/logo-icon.png" alt="favicon">
+                </div>
+                <div class="card-block-title">
+                  <h3>测试网站</h3>
+                  <p>这是一个示例网站描述这是一个示例网站描述</p>
+                </div>
+              </div>
+              <!-- 卡片信息层结束 -->
+
+              <!-- 卡片按钮层 -->
+              <div class="card-hover">
+                <button class="card-button-goto">前往</button>
+                <button class="card-button-setting">设置</button>
+              </div>
+              <!-- 卡片按钮层结束 -->
+
+            </div>
+            <!-- 单个卡片结束 -->
+
+            <!-- 单个卡片 -->
+            <div class="card">
+
+              <!-- 卡片信息层 -->
+              <div class="card-block">
+                <div class="card-block-favicon">
+                  <img id="favicon" src="./img/logo-icon.png" alt="favicon">
+                </div>
+                <div class="card-block-title">
+                  <h3>测试网站</h3>
+                  <p>这是一个示例网站描述这是一个示例网站描述</p>
+                </div>
+              </div>
+              <!-- 卡片信息层结束 -->
+
+              <!-- 卡片按钮层 -->
+              <div class="card-hover">
+                <button class="card-button-goto">前往</button>
+                <button class="card-button-setting">设置</button>
+              </div>
+              <!-- 卡片按钮层结束 -->
+
+            </div>
+            <!-- 单个卡片结束 -->
+
+
+            <!-- 单个卡片 -->
+            <div class="card">
+
+              <!-- 卡片信息层 -->
+              <div class="card-block">
+                <div class="card-block-favicon">
+                  <img id="favicon" src="./img/logo-icon.png" alt="favicon">
+                </div>
+                <div class="card-block-title">
+                  <h3>测试网站</h3>
+                  <p>这是一个示例网站描述这是一个示例网站描述</p>
+                </div>
+              </div>
+              <!-- 卡片信息层结束 -->
+
+              <!-- 卡片按钮层 -->
+              <div class="card-hover">
+                <button class="card-button-goto">前往</button>
+                <button class="card-button-setting">设置</button>
+              </div>
+              <!-- 卡片按钮层结束 -->
+
+            </div>
+            <!-- 单个卡片结束 -->
+
+
+            <!-- 单个卡片 -->
+            <div class="card">
+
+              <!-- 卡片信息层 -->
+              <div class="card-block">
+                <div class="card-block-favicon">
+                  <img id="favicon" src="./img/logo-icon.png" alt="favicon">
+                </div>
+                <div class="card-block-title">
+                  <h3>测试网站</h3>
+                  <p>这是一个示例网站描述这是一个示例网站描述</p>
+                </div>
+              </div>
+              <!-- 卡片信息层结束 -->
+
+              <!-- 卡片按钮层 -->
+              <div class="card-hover">
+                <button class="card-button-goto">前往</button>
+                <button class="card-button-setting">设置</button>
+              </div>
+              <!-- 卡片按钮层结束 -->
+
+            </div>
+            <!-- 单个卡片结束 -->
+
+
+            <!-- 单个卡片 -->
+            <div class="card">
+
+              <!-- 卡片信息层 -->
+              <div class="card-block">
+                <div class="card-block-favicon">
+                  <img id="favicon" src="./img/logo-icon.png" alt="favicon">
+                </div>
+                <div class="card-block-title">
+                  <h3>测试网站</h3>
+                  <p>这是一个示例网站描述这是一个示例网站描述</p>
+                </div>
+              </div>
+              <!-- 卡片信息层结束 -->
+
+              <!-- 卡片按钮层 -->
+              <div class="card-hover">
+                <button class="card-button-goto">前往</button>
+                <button class="card-button-setting">设置</button>
+              </div>
+              <!-- 卡片按钮层结束 -->
+
+            </div>
+            <!-- 单个卡片结束 -->
+
+          </div>
+          <!-- 卡片列表结束 -->
+
+        </section>
+        <!-- 单个卡片类结束 -->
+
+        <!-- ----------------------------------------------- -->
+
+
+
+      </div>
+      <!-- 卡片类区域结束 -->
 
     </main>
+
   </div>
 
   <script>
+
+    //获取事件，输入标签，直接插入时间
     function updateTime(ElementId) {
       let getTimeElement = document.getElementById(ElementId)
       let now = new Date()
@@ -105,10 +547,11 @@
       let minutes = String(now.getMinutes()).padStart(2, "0")
       let miao = String(now.getSeconds()).padStart(2, "0")
       let time = `${hours}:${minutes}:${miao}`
-      console.log(time)
+      // console.log(time)
       getTimeElement.innerText = time
     }
 
+    updateTime("header-time")
     setInterval(() => { updateTime("header-time") }, 1000);
   </script>
 </body>

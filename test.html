@@ -1,159 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    /* http://meyerweb.com/eric/tools/css/reset/
-   v5.0.2 | 20191019
-   License: none (public domain)
-*/
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>智能搜索框</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f4f8;
+            margin: 0;
+        }
 
-    html,
-    body,
-    div,
-    span,
-    applet,
-    object,
-    iframe,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    blockquote,
-    pre,
-    a,
-    abbr,
-    acronym,
-    address,
-    big,
-    cite,
-    code,
-    del,
-    dfn,
-    em,
-    img,
-    ins,
-    kbd,
-    q,
-    s,
-    samp,
-    small,
-    strike,
-    strong,
-    sub,
-    sup,
-    tt,
-    var,
-    b,
-    u,
-    i,
-    center,
-    dl,
-    dt,
-    dd,
-    ol,
-    ul,
-    li,
-    fieldset,
-    form,
-    label,
-    legend,
-    table,
-    caption,
-    tbody,
-    tfoot,
-    thead,
-    tr,
-    th,
-    td,
-    article,
-    aside,
-    canvas,
-    details,
-    embed,
-    figure,
-    figcaption,
-    footer,
-    header,
-    hgroup,
-    main,
-    menu,
-    nav,
-    output,
-    ruby,
-    section,
-    summary,
-    time,
-    mark,
-    audio,
-    video {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      font-size: 100%;
-      font: inherit;
-      vertical-align: baseline;
-    }
+        .search-container {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            width: 300px;
+        }
 
-    /* HTML5 display-role reset for older browsers */
-    article,
-    aside,
-    details,
-    figcaption,
-    figure,
-    footer,
-    header,
-    hgroup,
-    main,
-    menu,
-    nav,
-    section {
-      display: block;
-    }
+        .search-icon {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f0f0f0;
+            font-size: 18px;
+            transition: background-color 0.2s;
+        }
 
-    /* HTML5 hidden-attribute fix for newer browsers */
-    *[hidden] {
-      display: none;
-    }
+        .search-icon:hover {
+            background-color: #e0e0e0;
+        }
 
-    body {
-      line-height: 1;
-    }
+        .search-input {
+            padding: 10px;
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 14px;
+        }
 
-    menu,
-    ol,
-    ul {
-      list-style: none;
-    }
+        .search-engines {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 0 0 5px 5px;
+            z-index: 10;
+            margin-top: 2px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
 
-    blockquote,
-    q {
-      quotes: none;
-    }
+        .search-engines ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            max-height: 150px;
+            overflow-y: auto;
+        }
 
-    blockquote:before,
-    blockquote:after,
-    q:before,
-    q:after {
-      content: '';
-      content: none;
-    }
+        .search-engines li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
 
-    table {
-      border-collapse: collapse;
-      border-spacing: 0;
-    }
-  </style>
+        .search-engines li:hover {
+            background-color: #f0f0f0;
+        }
+
+        .search-engines li:last-child {
+            border-bottom: none;
+        }
+    </style>
 </head>
+<body>
+    <div class="search-container">
+        <div class="search-icon" id="searchIcon">🔍</div>
+        <input type="text" id="searchInput" class="search-input" 
+               placeholder="请输入关键字，按回车搜索">
+        <div class="search-engines" id="searchEngines">
+            <ul>
+                <li data-engine="baidu"><a href="#">百度</a></li>
+                <li data-engine="google"><a href="#">谷歌</a></li>
+                <li data-engine="bing"><a href="#">必应</a></li>
+            </ul>
+        </div>
+    </div>
 
-<body style="height: 100vh;background-color: aqua;">
+    <script>
+        const icon = document.getElementById('searchIcon');
+        const engines = document.getElementById('searchEngines');
+        const input = document.getElementById('searchInput');
 
+        // 显示引擎列表
+        icon.addEventListener('mouseenter', () => {
+            engines.style.display = 'block';
+        });
+
+        engines.addEventListener('mouseenter', () => {
+            engines.style.display = 'block';
+        });
+
+        // 隐藏引擎列表
+        icon.addEventListener('mouseleave', () => {
+            setTimeout(() => {
+                if (!engines.matches(':hover')) {
+                    engines.style.display = 'none';
+                }
+            }, 200);
+        });
+
+        engines.addEventListener('mouseleave', () => {
+            engines.style.display = 'none';
+        });
+
+        // 搜索执行逻辑
+        document.querySelectorAll('.search-engines li').forEach(item => {
+            item.addEventListener('click', () => {
+                const engine = item.dataset.engine;
+                const query = encodeURIComponent(input.value.trim());
+                let url = '';
+                
+                switch(engine) {
+                    case 'baidu':
+                        url = `https://www.baidu.com/s?ie=utf-8&wd=${query}`;
+                        break;
+                    case 'google':
+                        url = `https://www.google.com/search?q=${query}`;
+                        break;
+                    case 'bing':
+                        url = `https://www.bing.com/search?q=${query}`;
+                        break;
+                }
+
+                if (query && url) {
+                    window.open(url, '_blank');
+                } else {
+                    alert('请输入搜索内容');
+                }
+            });
+        });
+
+        // 回车搜索（默认使用百度）
+        input.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                const query = encodeURIComponent(input.value.trim());
+                window.open(`https://www.baidu.com/s?ie=utf-8&wd=${query}`, '_blank');
+            }
+        });
+    </script>
 </body>
-
 </html>
