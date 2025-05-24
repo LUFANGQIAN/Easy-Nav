@@ -144,6 +144,23 @@ header nav {
   border: none;
   padding: 0 0;
   border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.button-list button:nth-child(1):hover {
+  background-color: #38DAA5;
+}
+
+.button-list button:nth-child(2):hover {
+  background-color: #FFB341;
+}
+
+.button-list button:nth-child(3):hover {
+  background-color: #F2494F;
+}
+
+.button-list button:nth-child(4):hover {
+  background-color: #415AFF;
 }
 
 .button-list-icon {
@@ -343,6 +360,68 @@ main {
   border-radius: 0 0.5rem 0.5rem 0;
   color: #fff;
   font-weight: bold;
+}
+
+.modal {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  width: 14.5833333333vw;
+}
+
+.close-modal {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.modal-content h2 {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group {
+  margin: 1rem 0;
+}
+
+.form-group-title {
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.25rem;
+  border: 0.1rem solid #ddd;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+}
+
+.save-button {
+  width: 100%;
+  height: 3rem;
+  background-color: #4CAF50;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  color: #fff;
 }
 
 /*# sourceMappingURL=index.css.map */
