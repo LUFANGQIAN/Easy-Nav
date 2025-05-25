@@ -2,12 +2,11 @@
 
 //加载卡片函数
 //获取卡片列表数据，接受加载分类的参数来加载对应的card
-function loadCard(typeId) {
-  
+function loadCard(typeId, cardListId) {
+
   //获取卡片列表节点
   //通过appendChild()向里面添加站点
-  alert(`成功调用loadCard函数 ${typeId}`)
-  const cardlist = document.getElementById('cardList');
+  const cardlist = document.getElementById(cardListId);
   cardlist.innerHTML = ''
 
   //创建站点卡片
@@ -17,7 +16,6 @@ function loadCard(typeId) {
     siteInfo => {
       if (typeId == siteInfo.typeId) {
         //在card中创建div标签并设置class为card
-        alert("进入判断")
 
         const card = document.createElement('div')
         card.className = 'card'
@@ -59,6 +57,7 @@ function loadType() {
   typeInfoList.forEach(
     typeInfo => {
       const section = document.createElement('section')
+      const cardListId = `cardList-${typeInfo.typeId}`
 
       section.innerHTML = `
           <!-- 分类图标与标题 -->
@@ -69,13 +68,13 @@ function loadType() {
           <!-- 分类图标与标题结束 -->
 
           <!-- 卡片列表 -->
-          <div class="card-list" id="cardList">
+          <div class="card-list" id="${cardListId}">
 
           </div>
           <!-- 卡片列表结束 -->
           `
       typeList.appendChild(section)
-      loadCard(typeInfo.typeId)
+      loadCard(typeInfo.typeId, cardListId)
     }
   )
 }
@@ -145,7 +144,7 @@ let siteInfoList = [
   },
   {
     cardId: 4,
-    typeId: 1,
+    typeId: 2,
     name: '示例网站4',
     url: 'https://example2.com',
     description: '这是一个示例网站描述',
@@ -153,7 +152,7 @@ let siteInfoList = [
   },
   {
     cardId: 5,
-    typeId: 1,
+    typeId: 2,
     name: '示例网站5',
     url: 'https://example2.com',
     description: '这是一个示例网站描述',
